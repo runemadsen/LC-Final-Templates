@@ -15,6 +15,8 @@
 	IBOutlet UIButton* saveButton;
 }
 
+@property (nonatomic, retain) IBOutlet UITextField * templateName;
+
 - (IBAction) save:(id)sender;
 
 @end

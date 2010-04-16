@@ -12,10 +12,43 @@
 @implementation Template
 @synthesize name;
 
+/* Init
+ ______________________________________________________________ */
+
 -(id)initWithName:(NSString*)n 
 {
 	self.name = n;
+	
 	return self;
+}
+
+/* Archiving
+ ______________________________________________________________ */
+
+- (id) initWithCoder:(NSCoder*)coder
+{
+	self = [super init];
+	
+	if(self != nil)
+	{
+		self.name = [coder decodeObjectForKey:@"name"];
+	}
+	
+	return self;
+}
+
+- (void) encodeWithCoder:(NSCoder*)coder
+{
+	[coder encodeObject:self.name forKey:@"name"];
+}
+
+/* Dealloc
+ ______________________________________________________________ */
+
+- (void)dealloc 
+{
+    [name release];
+    [super dealloc];
 }
 
 @end

@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Template : NSObject {
-	
+@interface Template : NSObject <NSCoding> 
+{	
 	NSString * name;
 }
 

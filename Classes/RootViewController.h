@@ -11,7 +11,7 @@
 #import "AddTemplateViewController.h"
 #import "Template.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UITableViewController <UITableViewDelegate> {
 	
 	TemplateViewController * templateView;
 	AddTemplateViewController * addTemplateView;
@@ -23,5 +23,6 @@
 @property (nonatomic, retain) TemplatesLoader * loader;
 
 - (void) saveNewTemplate:(id)sender;
+- (void) hello;
 
 @end

@@ -7,12 +7,12 @@
 //
 
 #import "TemplatesLoader.h"
-#import "Template.h"
-#import "LCFileHelpers.h"
-#import <sqlite3.h>
 
 @implementation TemplatesLoader
 @synthesize templates;
+
+/* Init
+ ______________________________________________________________ */
 
 -(id)initAndLoad
 {
@@ -23,8 +23,31 @@
 	
 	self.templates = [[NSMutableArray alloc] initWithObjects:template1, template2, template3, nil];
 	
+	[template1 release];
+	[template2 release];
+	[template3 release];
+	
 	return self;
 }
+
+/* Utilities
+ ______________________________________________________________ */
+
+-(void)reorderFrom:(NSInteger)oldIndex to:(NSInteger)newIndex
+{
+	Template * template = [[self.templates objectAtIndex:oldIndex] retain];
+	
+	[self.templates removeObjectAtIndex:oldIndex];
+	[self.templates insertObject:template atIndex:newIndex];
+}
+
+-(void)addRow:(Template *)newTemplate
+{
+	[self.templates addObject:newTemplate];
+}
+
+/* Archiving
+ ______________________________________________________________ */
 
 - (id) initWithCoder:(NSCoder*)coder
 {
@@ -43,5 +66,13 @@
 	[coder encodeObject:self.templates forKey:@"templates"];
 }
 
+/* Dealloc
+ ______________________________________________________________ */
+
+- (void)dealloc 
+{
+    [templates release];
+    [super dealloc];
+}
 
 @end

@@ -10,6 +10,7 @@
 
 
 @implementation AddTemplateViewController
+@synthesize templateName;
 
 - (IBAction) save:(id)sender
 {		
