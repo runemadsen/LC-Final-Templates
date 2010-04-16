@@ -18,7 +18,7 @@
 
 @property (nonatomic, retain) NSMutableArray * templates;
 
-- (id) initAndLoad;
+- (id) initEmpty;
 - (void) reorderFrom:(NSInteger)oldIndex to:(NSInteger)newIndex;
 - (void) addRow:(Template *)newTemplate;
 

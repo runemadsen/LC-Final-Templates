@@ -327,24 +327,24 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A54E3C291178E3ED00D9D332</string>
+										<string>A54E3CD11178EC5000D9D332</string>
 										<key>history</key>
 										<array>
 											<string>A57FD310116D512F0078207A</string>
 											<string>A57FD319116D512F0078207A</string>
 											<string>A57FD31C116D51E90078207A</string>
-											<string>A54E3AEA1178D1E600D9D332</string>
-											<string>A54E3B9B1178DC8B00D9D332</string>
 											<string>A54E3B9C1178DC8B00D9D332</string>
-											<string>A54E3BC51178DEC200D9D332</string>
-											<string>A54E3C021178E22A00D9D332</string>
-											<string>A54E3C031178E22A00D9D332</string>
-											<string>A54E3C061178E22A00D9D332</string>
-											<string>A54E3C091178E26700D9D332</string>
-											<string>A54E3C241178E3CE00D9D332</string>
-											<string>A54E3C251178E3CE00D9D332</string>
-											<string>A54E3C261178E3CE00D9D332</string>
-											<string>A54E3C271178E3CE00D9D332</string>
+											<string>A54E3C431178E6C300D9D332</string>
+											<string>A54E3C461178E6C300D9D332</string>
+											<string>A54E3C481178E6C300D9D332</string>
+											<string>A54E3C671178E8C200D9D332</string>
+											<string>A54E3CB61178EAEE00D9D332</string>
+											<string>A54E3CB71178EAEE00D9D332</string>
+											<string>A54E3CB81178EAEE00D9D332</string>
+											<string>A54E3CB91178EAEE00D9D332</string>
+											<string>A54E3CBA1178EAEE00D9D332</string>
+											<string>A54E3CBB1178EAEE00D9D332</string>
+											<string>A54E3CBC1178EAEE00D9D332</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -544,9 +544,9 @@
 	<array>
 		<string>A54E3B3E1178D64C00D9D332</string>
 		<string>A54E3B391178D62200D9D332</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A57FD2BD116D402B0078207A</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Rune/Projects/Little Computers/Repositories/Final-Templates/Final-Templates.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -898,7 +898,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1119, 496}}</string>
 								<key>RubberWindowFrame</key>
-								<string>42 341 1119 537 0 0 1440 878 </string>
+								<string>316 202 1119 537 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -927,11 +927,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>42 341 1119 537 0 0 1440 878 </string>
+			<string>316 202 1119 537 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

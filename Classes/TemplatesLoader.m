@@ -14,18 +14,18 @@
 /* Init
  ______________________________________________________________ */
 
--(id)initAndLoad
+-(id)initEmpty
 {
 	// test data
-	Template * template1 = [[Template alloc] initWithName:@"Template 1"];
-	Template * template2 = [[Template alloc] initWithName:@"Template 2"];
-	Template * template3 = [[Template alloc] initWithName:@"Template 3"];
+	//Template * template1 = [[Template alloc] initWithName:@"Template 1"];
+	//Template * template2 = [[Template alloc] initWithName:@"Template 2"];
+	//Template * template3 = [[Template alloc] initWithName:@"Template 3"];
 	
-	self.templates = [[NSMutableArray alloc] initWithObjects:template1, template2, template3, nil];
+	self.templates = [[NSMutableArray alloc] init];//initWithObjects:template1, template2, template3, nil];
 	
-	[template1 release];
-	[template2 release];
-	[template3 release];
+	//[template1 release];
+	//[template2 release];
+	//[template3 release];
 	
 	return self;
 }

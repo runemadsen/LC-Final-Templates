@@ -26,7 +26,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application 
 {
-	// Save data if appropriate
+	NSNotificationCenter * dc = [NSNotificationCenter defaultCenter];
+	[dc postNotification:[NSNotification notificationWithName:@"ApplicationTerminate" object:self]];
 }
 
 

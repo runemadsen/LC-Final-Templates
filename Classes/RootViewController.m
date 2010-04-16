@@ -22,8 +22,20 @@ ______________________________________________________________ */
 	
 	NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
 	[dc addObserver:self selector:@selector(saveNewTemplate:) name:@"SaveNewTemplate" object:NULL];
+	[dc addObserver:self selector:@selector(saveAllData:) name:@"ApplicationTerminate" object:NULL];
 	
-	loader = [[TemplatesLoader alloc] initAndLoad];
+	// Load data
+	
+	NSString *fileName = @"SavedTemplates";
+	
+	if([[LCFileHelpers allDocuments] containsObject:fileName])
+	{
+		loader = (TemplatesLoader *)[[NSKeyedUnarchiver unarchiveObjectWithFile:[LCFileHelpers pathToFileInDocuments:fileName]] retain];
+	}
+	else
+	{		
+		loader = [[TemplatesLoader alloc] initEmpty];
+	}
 
 	self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
@@ -55,6 +67,25 @@ ______________________________________________________________ */
 	[self.tableView reloadData];
 	
 	[newTemplate release];
+}
+
+/* Save all data
+ ______________________________________________________________ */
+
+- (void) saveAllData:(id)sender
+{	
+	/*Person * newPerson = [[Person alloc] initWithFirstName:firstNameField.text
+												 lastName:lastNameField.text 
+											  luckyNumber:[luckyNumberField.text intValue]];*/
+	
+	NSString *filePath = [LCFileHelpers pathToFileInDocuments:@"SavedTemplates"];
+	
+	BOOL noErr = [NSKeyedArchiver archiveRootObject:loader toFile:filePath];
+	
+	if(!noErr)
+	{
+		NSLog(@"Oops! something went wrong trying to save that person.");
+	}
 }
 
 /* Table View Methods
@@ -167,11 +198,6 @@ ______________________________________________________________ */
 {
     [super dealloc];
 	[loader dealloc];
-}
-
-- (void) hello
-{
-	NSLog(@"Save the stuff");
 }
 
 /*
