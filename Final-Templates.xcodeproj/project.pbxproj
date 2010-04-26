@@ -22,7 +22,20 @@
 		A57FD30B116D503A0078207A /* TemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57FD30A116D503A0078207A /* TemplateViewController.xib */; };
 		A57FD30E116D506B0078207A /* TemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD30D116D506B0078207A /* TemplateViewController.m */; };
 		A5D18348116E534A00E2122C /* LCFileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D18347116E534A00E2122C /* LCFileHelpers.m */; };
+		A5FEAAA911865BEC003C7521 /* Prime31.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAA711865BEC003C7521 /* Prime31.bundle */; };
+		A5FEAAAA11865BEC003C7521 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAA811865BEC003C7521 /* Three20.bundle */; };
+		A5FEAABF11865BFB003C7521 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FEAABE11865BFB003C7521 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5FEAA7411865BDC003C7521 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5FEAA7011865BDC003C7521 /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20.a */;
+			remoteInfo = "Three20-P31";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,6 +63,10 @@
 		A57FD30D116D506B0078207A /* TemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateViewController.m; sourceTree = "<group>"; };
 		A5D18346116E534A00E2122C /* LCFileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFileHelpers.h; sourceTree = "<group>"; };
 		A5D18347116E534A00E2122C /* LCFileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFileHelpers.m; sourceTree = "<group>"; };
+		A5FEAA7011865BDC003C7521 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = "../TTPickerTextFieldDemo/three20-P31/src/Three20.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		A5FEAAA711865BEC003C7521 /* Prime31.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Prime31.bundle; path = "../TTPickerTextFieldDemo/three20-P31/src/P31-Additions/Prime31.bundle"; sourceTree = SOURCE_ROOT; };
+		A5FEAAA811865BEC003C7521 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = "../TTPickerTextFieldDemo/three20-P31/src/Three20.bundle"; sourceTree = SOURCE_ROOT; };
+		A5FEAABE11865BFB003C7521 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +77,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				A5FEAABF11865BFB003C7521 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +116,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A5FEAA7011865BDC003C7521 /* Three20.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -119,6 +138,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5FEAAA711865BEC003C7521 /* Prime31.bundle */,
+				A5FEAAA811865BEC003C7521 /* Three20.bundle */,
 				A516EA00116E644E0024FFA5 /* AddTemplateViewController.xib */,
 				A57FD30A116D503A0078207A /* TemplateViewController.xib */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
@@ -131,11 +152,20 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5FEAABE11865BFB003C7521 /* QuartzCore.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5FEAA7111865BDC003C7521 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5FEAA7511865BDC003C7521 /* libThree20.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +205,28 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A5FEAA7111865BDC003C7521 /* Products */;
+					ProjectRef = A5FEAA7011865BDC003C7521 /* Three20.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Final-Templates */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A5FEAA7511865BDC003C7521 /* libThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20.a;
+			remoteRef = A5FEAA7411865BDC003C7521 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -191,6 +237,8 @@
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
 				A57FD30B116D503A0078207A /* TemplateViewController.xib in Resources */,
 				A516EA01116E644E0024FFA5 /* AddTemplateViewController.xib in Resources */,
+				A5FEAAA911865BEC003C7521 /* Prime31.bundle in Resources */,
+				A5FEAAAA11865BEC003C7521 /* Three20.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

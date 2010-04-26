@@ -1,11 +1,3 @@
-//
-//  TemplatesLoader.m
-//  Final-Templates
-//
-//  Created by Rune Madsen on 4/8/10.
-//  Copyright 2010 New York University. All rights reserved.
-//
-
 #import "TemplatesLoader.h"
 
 @implementation TemplatesLoader
@@ -16,16 +8,7 @@
 
 -(id)initEmpty
 {
-	// test data
-	//Template * template1 = [[Template alloc] initWithName:@"Template 1"];
-	//Template * template2 = [[Template alloc] initWithName:@"Template 2"];
-	//Template * template3 = [[Template alloc] initWithName:@"Template 3"];
-	
-	self.templates = [[NSMutableArray alloc] init];//initWithObjects:template1, template2, template3, nil];
-	
-	//[template1 release];
-	//[template2 release];
-	//[template3 release];
+	self.templates = [[NSMutableArray alloc] init];
 	
 	return self;
 }
