@@ -11,6 +11,7 @@
 		self.model = newModel;
 		self.frame = frame;
 		self.bounds = frame;
+		self.center = self.model.location;
         UIButton * btn = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
 		btn.frame = frame;
         
@@ -33,12 +34,13 @@
 }
 
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	// update the model to reflect the new position, add x y to model
-	
+{	
 	UITouch * touch = [touches anyObject];
 	CGPoint location = [touch locationInView:self.superview];
 	self.center = location;
+	
+	// update the model
+	self.model.location = location;
 }
 
 -(IBAction)buttonClick:(id)sender

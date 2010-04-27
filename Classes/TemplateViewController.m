@@ -88,6 +88,7 @@
 	CustomButton * buttonModel = [[CustomButton alloc] init];
 	buttonModel.name = [[editView firstTextField] text];
 	buttonModel.shortcut = [[editView secondTextField] text];
+	buttonModel.location = CGPointMake(20, 20);
 	
 	// push to model
 	[self.model.buttons addObject:buttonModel];
