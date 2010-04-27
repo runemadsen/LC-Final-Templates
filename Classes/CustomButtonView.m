@@ -34,6 +34,7 @@
 
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	// update the model to reflect the new position, add x y to model
 	
 	UITouch * touch = [touches anyObject];
 	CGPoint location = [touch locationInView:self.superview];
@@ -41,11 +42,8 @@
 }
 
 -(IBAction)buttonClick:(id)sender
-{
-	// loop through shortcuts
-	//NSString * txt = self.model.shortcuts;
-	
-	//NSLog(@"%@",txt);	
+{	
+	NSLog(@"%@", self.model.shortcut);	
 }
 
 @end

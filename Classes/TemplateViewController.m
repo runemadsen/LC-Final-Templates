@@ -60,14 +60,14 @@
 
 -(IBAction)editButton:(id)sender
 {
-	/*for (int i=0; i<[[self.listView buttons] count];i++)
+	for(int i = 0; i < [[self.listView.view subviews] count]; i++)
 	{
-		BOOL en=[[[self.listView buttons] objectAtIndex:i] button].enabled;
+		BOOL en= [[[self.listView.view subviews] objectAtIndex:i] button].enabled;
 		
-		[[[[self.listView buttons] objectAtIndex:i] button] setEnabled:!en];
+		[[[[self.listView.view subviews] objectAtIndex:i] button] setEnabled:!en];
 	}
 	
-	[self.listView viewDidLoad];*/	
+	//[self.listView viewDidLoad];
 }
 
 -(IBAction)trushButton:(id)sender
@@ -91,8 +91,6 @@
 	
 	// push to model
 	[self.model.buttons addObject:buttonModel];
-	
-	NSLog(@"Outside: %d", [self.model.buttons count]);
 	
 	// update views in list
 	[self.listView refreshButtons:self.model.buttons];
@@ -136,11 +134,11 @@
 
 -(void)displayEditToolbar
 {
-	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+	UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 																				  target:self
 																				  action:@selector(cancelButton:)];
 	
-	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+	UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
 																				target:self
 																				action:@selector(doneButton:)];
 	

@@ -277,8 +277,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>6</integer>
+									<integer>19</integer>
+									<integer>17</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -321,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TemplateViewController.m</string>
+								<string>CustomButtonView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TemplateViewController.m</string>
+										<string>CustomButtonView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A5FEAD3C1186946B003C7521</string>
+										<string>A5FEAD8311869A4D003C7521</string>
 										<key>history</key>
 										<array>
 											<string>A57FD310116D512F0078207A</string>
@@ -348,18 +348,18 @@
 											<string>A5FEAC64118683CD003C7521</string>
 											<string>A5FEAC691186863B003C7521</string>
 											<string>A5FEAC9F11868CF1003C7521</string>
-											<string>A5FEACC711868F09003C7521</string>
 											<string>A5FEACD011869000003C7521</string>
 											<string>A5FEACE11186910F003C7521</string>
 											<string>A5FEAD1611869384003C7521</string>
 											<string>A5FEAD1711869384003C7521</string>
 											<string>A5FEAD1911869384003C7521</string>
 											<string>A5FEAD1A11869384003C7521</string>
-											<string>A5FEAD2E1186941E003C7521</string>
-											<string>A5FEAD2F1186941E003C7521</string>
 											<string>A5FEAD3611869459003C7521</string>
 											<string>A5FEAD3711869459003C7521</string>
-											<string>A5FEAD3811869459003C7521</string>
+											<string>A5FEAD5C118697EF003C7521</string>
+											<string>A5FEAD7211869952003C7521</string>
+											<string>A5FEAD8011869A4D003C7521</string>
+											<string>A5FEAD8111869A4D003C7521</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

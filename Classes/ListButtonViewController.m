@@ -11,14 +11,17 @@
 
 -(void)refreshButtons:(NSMutableArray *)buttons
 {	
-	// does CGRect work here?
-	NSLog(@"Inside: %d", [buttons count]);
+	//this is a bit stupid, but we do it
+	for (UIView * view in self.view.subviews) 
+	{
+		[view removeFromSuperview];
+	}
 	
 	for(int i = 0; i < [buttons count]; i++) 
 	{
 		CGRect rect = CGRectMake(20, 20, 60, 20);
 		CustomButtonView * btn = [[CustomButtonView alloc] initWithFrame:rect model:[buttons objectAtIndex:(NSUInteger) i]];
-		[self.view insertSubview:btn atIndex:0];
+		[self.view addSubview:btn];
 	}
 }
 
