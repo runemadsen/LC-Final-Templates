@@ -11,6 +11,7 @@
 
 @implementation Template
 @synthesize name;
+@synthesize buttons;
 
 /* Init
  ______________________________________________________________ */
@@ -18,6 +19,7 @@
 -(id)initWithName:(NSString*)n 
 {
 	self.name = n;
+	self.buttons = [[NSMutableArray alloc] init];
 	
 	return self;
 }
@@ -32,6 +34,7 @@
 	if(self != nil)
 	{
 		self.name = [coder decodeObjectForKey:@"name"];
+		self.buttons = [coder decodeObjectForKey:@"buttons"];
 	}
 	
 	return self;
@@ -40,6 +43,7 @@
 - (void) encodeWithCoder:(NSCoder*)coder
 {
 	[coder encodeObject:self.name forKey:@"name"];
+	[coder encodeObject:self.buttons forKey:@"buttons"];
 }
 
 /* Dealloc
@@ -48,6 +52,7 @@
 - (void)dealloc 
 {
     [name release];
+	[buttons release];
     [super dealloc];
 }
 

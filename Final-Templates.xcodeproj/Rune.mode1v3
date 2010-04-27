@@ -265,6 +265,10 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>A5FEAC56118683AD003C7521</string>
+								<string>A5FEAC551186839F003C7521</string>
+								<string>A5FEAC5411868396003C7521</string>
+								<string>A5FEAC5311868392003C7521</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
@@ -273,13 +277,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
+									<integer>10</integer>
+									<integer>6</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 3}, {260, 760}}</string>
+							<string>{{0, 32}, {260, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -328,26 +333,33 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A5FEABAC11866DF1003C7521</string>
+										<string>A5FEAD3C1186946B003C7521</string>
 										<key>history</key>
 										<array>
 											<string>A57FD310116D512F0078207A</string>
 											<string>A57FD319116D512F0078207A</string>
-											<string>A54E3B9C1178DC8B00D9D332</string>
 											<string>A54E3CB81178EAEE00D9D332</string>
-											<string>A5A62AD1117E66FA00CF302E</string>
-											<string>A5A62AD2117E66FA00CF302E</string>
-											<string>A5A62AD4117E66FA00CF302E</string>
-											<string>A5FEAA5E11865BCD003C7521</string>
-											<string>A5FEAAFC11865F2E003C7521</string>
-											<string>A5FEAAFD11865F2E003C7521</string>
-											<string>A5FEAAFE11865F2E003C7521</string>
-											<string>A5FEAAFF11865F2E003C7521</string>
-											<string>A5FEAB3811866672003C7521</string>
 											<string>A5FEAB6011866791003C7521</string>
-											<string>A5FEAB721186693E003C7521</string>
-											<string>A5FEAB7C11866AFA003C7521</string>
-											<string>A5FEAB78118669FF003C7521</string>
+											<string>A5FEABB711867183003C7521</string>
+											<string>A5FEABB811867183003C7521</string>
+											<string>A5FEAC0A11867A44003C7521</string>
+											<string>A5FEAC5E118683CD003C7521</string>
+											<string>A5FEAC60118683CD003C7521</string>
+											<string>A5FEAC64118683CD003C7521</string>
+											<string>A5FEAC691186863B003C7521</string>
+											<string>A5FEAC9F11868CF1003C7521</string>
+											<string>A5FEACC711868F09003C7521</string>
+											<string>A5FEACD011869000003C7521</string>
+											<string>A5FEACE11186910F003C7521</string>
+											<string>A5FEAD1611869384003C7521</string>
+											<string>A5FEAD1711869384003C7521</string>
+											<string>A5FEAD1911869384003C7521</string>
+											<string>A5FEAD1A11869384003C7521</string>
+											<string>A5FEAD2E1186941E003C7521</string>
+											<string>A5FEAD2F1186941E003C7521</string>
+											<string>A5FEAD3611869459003C7521</string>
+											<string>A5FEAD3711869459003C7521</string>
+											<string>A5FEAD3811869459003C7521</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -575,7 +587,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>TemplateViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

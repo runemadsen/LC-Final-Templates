@@ -8,8 +8,8 @@
 
 @interface Final_TemplatesAppDelegate : NSObject <UIApplicationDelegate> {
     
-    UIWindow *window;
-    UINavigationController *navigationController;
+    UIWindow * window;
+    UINavigationController * navigationController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

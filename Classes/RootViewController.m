@@ -74,11 +74,7 @@ ______________________________________________________________ */
 
 - (void) saveAllData:(id)sender
 {	
-	/*Person * newPerson = [[Person alloc] initWithFirstName:firstNameField.text
-												 lastName:lastNameField.text 
-											  luckyNumber:[luckyNumberField.text intValue]];*/
-	
-	NSString *filePath = [LCFileHelpers pathToFileInDocuments:@"SavedTemplates"];
+	NSString * filePath = [LCFileHelpers pathToFileInDocuments:@"SavedTemplates"];
 	
 	BOOL noErr = [NSKeyedArchiver archiveRootObject:loader toFile:filePath];
 	
@@ -138,10 +134,14 @@ ______________________________________________________________ */
 	
 	if(self.templateView == nil)
 	{
-		TemplateViewController * aView = [[TemplateViewController alloc] init];
+		TemplateViewController * aView = [[TemplateViewController alloc] initWithTemplate:t];
 		self.templateView = aView;
 		//[aView release];
 	}
+	
+	t = (Template *) [loader.templates objectAtIndex:indexPath.row];
+	
+	NSLog(@"Name: %@", [t name]);
 	
 	[self.navigationController pushViewController:self.templateView animated:YES];
 	//self.templateView.title = [t name];

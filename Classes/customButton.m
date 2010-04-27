@@ -1,68 +1,51 @@
-//
-//  customButton.m
-//  finalphone
-//
-//  Created by Nikolas Psaroudakis on 4/23/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
+#import "CustomButton.h"
 
-#import "customButton.h"
-@implementation customButton
-@synthesize button;
+
+@implementation CustomButton
+
+@synthesize name;
 @synthesize shortcut;
-@synthesize title;
-//@synthesize userInteractionEnabled;
+@synthesize shortcuts;
 
+/* Archiving
+ ______________________________________________________________ */
 
-/*
--(void)drawRect:(CGRect)frame{
-	
-	
-	NSLog(@"Draw Rect Called");	
-	
-}
- */
-
-- (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-		//[self setUserInteractionEnabled:YES];
-		self.frame=frame;
-		self.bounds=frame;
-        UIButton *btn = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-		btn.frame = frame;
-        [btn setTitle:[self.button currentTitle] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        //btn.center = self.center;
-		[btn setEnabled:YES];
-		[self setButton:btn];
-        [self addSubview:button];
-		
-    }
-    return self;
-}
--(void)assignTitle:(NSString *)ttl andShortcut:(NSString *)srtcut {
-	
-		
-	[self setTitle:ttl];
-	[self setShortcut:srtcut];
-	[self.button setTitle:self.title forState:UIControlStateNormal];
-
-	
-}
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (id) initWithCoder:(NSCoder*)coder
 {
-	NSLog(@"Touched.");
+	self = [super init];
+	
+	if(self != nil)
+	{
+		self.name = [coder decodeObjectForKey:@"name"];
+		self.shortcut = [coder decodeObjectForKey:@"shortcut"];
+		self.shortcuts = [coder decodeObjectForKey:@"shortcuts"];
+	}
+	
+	return self;
 }
-- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+
+- (void) encodeWithCoder:(NSCoder*)coder
 {
-	NSLog(@"Dragged.");
-	UITouch *touch = [touches anyObject];
-	CGPoint location = [touch locationInView:self.superview];
-	self.center = location;
+	[coder encodeObject:self.name forKey:@"name"];
+	[coder encodeObject:self.shortcut forKey:@"shortcut"];
+	[coder encodeObject:self.shortcuts forKey:@"shortcuts"];
 }
--(IBAction)buttonClick:(id)sender{
-	NSString *txt =self.shortcut;
-	NSLog(@"%@",txt);	
+
+/* Dealloc
+ ______________________________________________________________ */
+
+- (void)dealloc 
+{
+    [name release];
+	[shortcut release];
+	[shortcuts release];
+    [super dealloc];
 }
 
 @end
+
+
+
+
+
+

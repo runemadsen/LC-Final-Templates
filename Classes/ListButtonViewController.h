@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 @class customButton;
 
-@interface ListButtonViewController : UIViewController <UITextFieldDelegate> {
-	NSMutableArray *buttons;
-	
+@interface ListButtonViewController : UIViewController <UITextFieldDelegate> 
+{
+
 }
-@property (nonatomic,retain) NSMutableArray *buttons;
+
 -(void)trialMethod:(id)sender;
+-(void)refreshButtons:(NSMutableArray *)buttons;
 
 @end

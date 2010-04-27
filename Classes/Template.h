@@ -1,20 +1,14 @@
-//
-//  Template.h
-//  Final-Templates
-//
-//  Created by Rune Madsen on 4/7/10.
-//  Copyright 2010 New York University. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 
 @interface Template : NSObject <NSCoding> 
 {	
 	NSString * name;
+	NSMutableArray * buttons;
 }
 
-@property(nonatomic,copy) NSString * name;
+@property(nonatomic, copy) NSString * name;
+@property(nonatomic, retain) NSMutableArray * buttons;
 
 -(id)initWithName:(NSString*)n;
 

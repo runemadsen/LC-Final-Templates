@@ -26,9 +26,10 @@
 		A5FEAABF11865BFB003C7521 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FEAABE11865BFB003C7521 /* QuartzCore.framework */; };
 		A5FEAAE411865D39003C7521 /* editView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAE211865D39003C7521 /* editView.xib */; };
 		A5FEAAE511865D39003C7521 /* listView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAE311865D39003C7521 /* listView.xib */; };
-		A5FEAAEF11865D89003C7521 /* customButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAE911865D89003C7521 /* customButton.m */; };
+		A5FEAAEF11865D89003C7521 /* CustomButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAE911865D89003C7521 /* CustomButtonView.m */; };
 		A5FEAAF011865D89003C7521 /* ListButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */; };
 		A5FEAAF111865D89003C7521 /* EditButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAED11865D89003C7521 /* EditButtonViewController.m */; };
+		A5FEAC681186842C003C7521 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAC671186842C003C7521 /* CustomButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,12 +73,14 @@
 		A5FEAABE11865BFB003C7521 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A5FEAAE211865D39003C7521 /* editView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = editView.xib; sourceTree = "<group>"; };
 		A5FEAAE311865D39003C7521 /* listView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = listView.xib; sourceTree = "<group>"; };
-		A5FEAAE811865D89003C7521 /* customButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customButton.h; sourceTree = "<group>"; };
-		A5FEAAE911865D89003C7521 /* customButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customButton.m; sourceTree = "<group>"; };
+		A5FEAAE811865D89003C7521 /* CustomButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButtonView.h; sourceTree = "<group>"; };
+		A5FEAAE911865D89003C7521 /* CustomButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButtonView.m; sourceTree = "<group>"; };
 		A5FEAAEA11865D89003C7521 /* ListButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListButtonViewController.h; sourceTree = "<group>"; };
 		A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListButtonViewController.m; sourceTree = "<group>"; };
 		A5FEAAEC11865D89003C7521 /* EditButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditButtonViewController.h; sourceTree = "<group>"; };
 		A5FEAAED11865D89003C7521 /* EditButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditButtonViewController.m; sourceTree = "<group>"; };
+		A5FEAC661186842C003C7521 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		A5FEAC671186842C003C7521 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,26 +101,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A5FEAAE811865D89003C7521 /* customButton.h */,
-				A5FEAAE911865D89003C7521 /* customButton.m */,
-				A5FEAAEA11865D89003C7521 /* ListButtonViewController.h */,
-				A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */,
-				A5FEAAEC11865D89003C7521 /* EditButtonViewController.h */,
-				A5FEAAED11865D89003C7521 /* EditButtonViewController.m */,
-				A5D18346116E534A00E2122C /* LCFileHelpers.h */,
-				A5D18347116E534A00E2122C /* LCFileHelpers.m */,
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				A5FEAC56118683AD003C7521 /* helpers */,
+				A5FEAC551186839F003C7521 /* controllers */,
+				A5FEAC5411868396003C7521 /* views */,
+				A5FEAC5311868392003C7521 /* models */,
 				1D3623240D0F684500981E51 /* Final_TemplatesAppDelegate.h */,
 				1D3623250D0F684500981E51 /* Final_TemplatesAppDelegate.m */,
-				A57FD301116D4CD90078207A /* Template.h */,
-				A57FD302116D4CD90078207A /* Template.m */,
-				A57FD30C116D506B0078207A /* TemplateViewController.h */,
-				A57FD30D116D506B0078207A /* TemplateViewController.m */,
-				A55B3F42116E3E1700C28475 /* TemplatesLoader.h */,
-				A55B3F43116E3E1700C28475 /* TemplatesLoader.m */,
-				A516E9FD116E640D0024FFA5 /* AddTemplateViewController.h */,
-				A516E9FE116E640D0024FFA5 /* AddTemplateViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -184,6 +173,54 @@
 				A5FEAA7511865BDC003C7521 /* libThree20.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A5FEAC5311868392003C7521 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A55B3F42116E3E1700C28475 /* TemplatesLoader.h */,
+				A55B3F43116E3E1700C28475 /* TemplatesLoader.m */,
+				A57FD301116D4CD90078207A /* Template.h */,
+				A57FD302116D4CD90078207A /* Template.m */,
+				A5FEAC661186842C003C7521 /* CustomButton.h */,
+				A5FEAC671186842C003C7521 /* CustomButton.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		A5FEAC5411868396003C7521 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A5FEAAE811865D89003C7521 /* CustomButtonView.h */,
+				A5FEAAE911865D89003C7521 /* CustomButtonView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		A5FEAC551186839F003C7521 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				A57FD30C116D506B0078207A /* TemplateViewController.h */,
+				A57FD30D116D506B0078207A /* TemplateViewController.m */,
+				A5FEAAEA11865D89003C7521 /* ListButtonViewController.h */,
+				A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */,
+				A5FEAAEC11865D89003C7521 /* EditButtonViewController.h */,
+				A5FEAAED11865D89003C7521 /* EditButtonViewController.m */,
+				A516E9FD116E640D0024FFA5 /* AddTemplateViewController.h */,
+				A516E9FE116E640D0024FFA5 /* AddTemplateViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		A5FEAC56118683AD003C7521 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D18346116E534A00E2122C /* LCFileHelpers.h */,
+				A5D18347116E534A00E2122C /* LCFileHelpers.m */,
+			);
+			name = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +313,10 @@
 				A55B3F44116E3E1700C28475 /* TemplatesLoader.m in Sources */,
 				A5D18348116E534A00E2122C /* LCFileHelpers.m in Sources */,
 				A516E9FF116E640D0024FFA5 /* AddTemplateViewController.m in Sources */,
-				A5FEAAEF11865D89003C7521 /* customButton.m in Sources */,
+				A5FEAAEF11865D89003C7521 /* CustomButtonView.m in Sources */,
 				A5FEAAF011865D89003C7521 /* ListButtonViewController.m in Sources */,
 				A5FEAAF111865D89003C7521 /* EditButtonViewController.m in Sources */,
+				A5FEAC681186842C003C7521 /* CustomButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

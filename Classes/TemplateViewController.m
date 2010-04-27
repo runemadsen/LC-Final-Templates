@@ -1,35 +1,44 @@
 #import "TemplateViewController.h"
-#import "ListButtonViewController.h"
-#import "EditButtonViewController.h"
-#import "customButton.h"
 
 @implementation TemplateViewController
 @synthesize listView;
 @synthesize editView;
 @synthesize toolbar;
+@synthesize model;
+
+-(id) initWithTemplate:(Template *)newModel
+{
+	self = [super init];
+	
+	if(self != nil)
+	{
+		model = newModel;
+	}
+	
+	return self;
+}
 
 -(void)viewDidLoad
 {	
-	
-	[self displayListToolbar];
-	
-	ListButtonViewController *listB = [[ListButtonViewController alloc] initWithNibName:@"listView" bundle:nil];
+	ListButtonViewController * listB = [[ListButtonViewController alloc] initWithNibName:@"listView" bundle:nil];
 	self.listView = listB;
 	[self.view insertSubview:listB.view atIndex:0];
 	[listB release];
 	
-	EditButtonViewController *editB = [[EditButtonViewController alloc] initWithNibName:@"editView" bundle:nil];
+	[self.listView refreshButtons:model.buttons];
+	
+	EditButtonViewController * editB = [[EditButtonViewController alloc] initWithNibName:@"editView" bundle:nil];
 	self.editView = editB;
 	[super viewDidLoad];
 	[editB release];
+	
+	[self displayListToolbar];
 	
 	enable = YES;
 }
 
 -(void)switchViews
 {
-	NSLog(@"switchViews");
-	
 	if (self.editView.view.superview == nil) 
 	{
 		[listView.view removeFromSuperview];
@@ -42,6 +51,7 @@
 		[self.listView viewDidLoad];
 	}
 }
+
 -(IBAction)newButton:(id)sender
 {
 	[self switchViews];
@@ -50,14 +60,14 @@
 
 -(IBAction)editButton:(id)sender
 {
-	for (int i=0; i<[[self.listView buttons] count];i++)
+	/*for (int i=0; i<[[self.listView buttons] count];i++)
 	{
 		BOOL en=[[[self.listView buttons] objectAtIndex:i] button].enabled;
 		
 		[[[[self.listView buttons] objectAtIndex:i] button] setEnabled:!en];
 	}
 	
-	[self.listView viewDidLoad];	
+	[self.listView viewDidLoad];*/	
 }
 
 -(IBAction)trushButton:(id)sender
@@ -73,14 +83,24 @@
 
 -(IBAction)doneButton:(id)sender
 {
-	CGRect rect =CGRectMake(20, 20, 60, 20);
-	customButton *btn = [[customButton alloc] initWithFrame:rect];
-	NSString *theShortcut= [[editView secondTextField] text];
-	NSString *theTitle =[[editView firstTextField] text];
-	[btn assignTitle:theTitle andShortcut:theShortcut];
-	[listView.buttons addObject:btn];
+	// new model, and refresh buttons on listview
+	
+	CustomButton * buttonModel = [[CustomButton alloc] init];
+	buttonModel.name = [[editView firstTextField] text];
+	buttonModel.shortcut = [[editView secondTextField] text];
+	
+	// push to model
+	[self.model.buttons addObject:buttonModel];
+	
+	NSLog(@"Outside: %d", [self.model.buttons count]);
+	
+	// update views in list
+	[self.listView refreshButtons:self.model.buttons];
+	
 	[self switchViews];
-	[self displayListToolbar];	
+	[self displayListToolbar];
+	
+	[buttonModel release];
 }
 
 -(void)displayListToolbar
@@ -103,13 +123,8 @@
 	NSArray * items = [NSArray arrayWithObjects: newButton, deleteButton, editButton, nil];
 	
 	UIToolbar * tools = [UIToolbar new];
-	//toolbar.barStyle = UIBarStyleDefault;
-	//[toolbar sizeToFit];
 	tools.frame = CGRectMake(0, 0, 133, 44.01);
-	//self.toolbar = tools;
-	//add array of buttons to toolbar
 	[tools setItems:items animated:NO];
-	//[self.view addSubview:toolbar];
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tools];
 	
@@ -121,8 +136,6 @@
 
 -(void)displayEditToolbar
 {
-	//[self.toolbar removeFromSuperview];
-	
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 																				  target:self
 																				  action:@selector(cancelButton:)];
@@ -131,23 +144,12 @@
 																				target:self
 																				action:@selector(doneButton:)];
 	
-	/*UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-																			  target:nil
-																			  action:nil];*/
-	
-	//Add buttons to the array
 	NSArray *items = [NSArray arrayWithObjects: cancelButton, doneButton, nil];	
-	//release buttons
 	
-	//[flexItem release];
 	UIToolbar * tools =[UIToolbar new];
-	//toolbar.barStyle = UIBarStyleDefault;
-	//[toolbar sizeToFit];
+
 	tools.frame = CGRectMake(0, 0, 133, 44.01);
-	//self.toolbar=toolbar;
-	//add array of buttons to toolbar
 	[tools setItems:items animated:NO];
-	//[self.view addSubview:self.toolbar];
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tools];
 	
@@ -159,23 +161,30 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-	if (self.listView.view.superview==nil) {
+	
+	if (self.listView.view.superview==nil) 
+	{
 		self.listView=nil;
-	} else {
+	} 
+	else 
+	{
 		self.editView=nil;
 	}
-    // Release any cached data, images, etc that aren't in use.
+    
+	// Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload 
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    
+	// Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
 
-- (void)dealloc {
+- (void)dealloc 
+{
     [super dealloc];
 }
 
