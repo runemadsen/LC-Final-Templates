@@ -11,8 +11,8 @@
 #import "AddTemplateViewController.h"
 #import "Template.h"
 
-@interface RootViewController : UITableViewController <UITableViewDelegate> {
-	
+@interface RootViewController : UITableViewController <UITableViewDelegate> 
+{	
 	TemplateViewController * templateView;
 	AddTemplateViewController * addTemplateView;
 	TemplatesLoader * loader;

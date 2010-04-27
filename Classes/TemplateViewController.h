@@ -1,19 +1,35 @@
-//
-//  TemplateViewController.h
-//  Final-Templates
-//
-//  Created by Rune Madsen on 4/7/10.
-//  Copyright 2010 New York University. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
+@class ListButtonViewController;
+@class EditButtonViewController;
+@class customButton;
 
 
-@interface TemplateViewController : UIViewController {
-	
-	IBOutlet UITextView * templateName;
+@interface TemplateViewController : UIViewController
+{
+	ListButtonViewController * listView;
+	EditButtonViewController * editView;
+	UIToolbar * toolbar;
+	BOOL enable;
 }
 
-@property (nonatomic, retain) IBOutlet UITextView * templateName;
+@property (retain, nonatomic) ListButtonViewController *listView;
+@property (retain, nonatomic) EditButtonViewController *editView;
+@property (nonatomic, retain) UIToolbar *toolbar;
+
+-(void)switchViews;
+-(IBAction)newButton:(id)sender;
+-(IBAction)editButton:(id)sender;
+-(IBAction)trushButton:(id)sender;
+-(IBAction)cancelButton:(id)sender;
+-(IBAction)doneButton:(id)sender;
+-(void)displayListToolbar;
+-(void)displayEditToolbar;
 
 @end
+
+
+
+
+
+
+

@@ -19,12 +19,16 @@
 		A516EA01116E644E0024FFA5 /* AddTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A516EA00116E644E0024FFA5 /* AddTemplateViewController.xib */; };
 		A55B3F44116E3E1700C28475 /* TemplatesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A55B3F43116E3E1700C28475 /* TemplatesLoader.m */; };
 		A57FD303116D4CD90078207A /* Template.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD302116D4CD90078207A /* Template.m */; };
-		A57FD30B116D503A0078207A /* TemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57FD30A116D503A0078207A /* TemplateViewController.xib */; };
 		A57FD30E116D506B0078207A /* TemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD30D116D506B0078207A /* TemplateViewController.m */; };
 		A5D18348116E534A00E2122C /* LCFileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D18347116E534A00E2122C /* LCFileHelpers.m */; };
 		A5FEAAA911865BEC003C7521 /* Prime31.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAA711865BEC003C7521 /* Prime31.bundle */; };
 		A5FEAAAA11865BEC003C7521 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAA811865BEC003C7521 /* Three20.bundle */; };
 		A5FEAABF11865BFB003C7521 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FEAABE11865BFB003C7521 /* QuartzCore.framework */; };
+		A5FEAAE411865D39003C7521 /* editView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAE211865D39003C7521 /* editView.xib */; };
+		A5FEAAE511865D39003C7521 /* listView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FEAAE311865D39003C7521 /* listView.xib */; };
+		A5FEAAEF11865D89003C7521 /* customButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAE911865D89003C7521 /* customButton.m */; };
+		A5FEAAF011865D89003C7521 /* ListButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */; };
+		A5FEAAF111865D89003C7521 /* EditButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FEAAED11865D89003C7521 /* EditButtonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +62,6 @@
 		A55B3F43116E3E1700C28475 /* TemplatesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplatesLoader.m; sourceTree = "<group>"; };
 		A57FD301116D4CD90078207A /* Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Template.h; sourceTree = "<group>"; };
 		A57FD302116D4CD90078207A /* Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Template.m; sourceTree = "<group>"; };
-		A57FD30A116D503A0078207A /* TemplateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateViewController.xib; sourceTree = "<group>"; };
 		A57FD30C116D506B0078207A /* TemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateViewController.h; sourceTree = "<group>"; };
 		A57FD30D116D506B0078207A /* TemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateViewController.m; sourceTree = "<group>"; };
 		A5D18346116E534A00E2122C /* LCFileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFileHelpers.h; sourceTree = "<group>"; };
@@ -67,6 +70,14 @@
 		A5FEAAA711865BEC003C7521 /* Prime31.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Prime31.bundle; path = "../TTPickerTextFieldDemo/three20-P31/src/P31-Additions/Prime31.bundle"; sourceTree = SOURCE_ROOT; };
 		A5FEAAA811865BEC003C7521 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = "../TTPickerTextFieldDemo/three20-P31/src/Three20.bundle"; sourceTree = SOURCE_ROOT; };
 		A5FEAABE11865BFB003C7521 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A5FEAAE211865D39003C7521 /* editView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = editView.xib; sourceTree = "<group>"; };
+		A5FEAAE311865D39003C7521 /* listView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = listView.xib; sourceTree = "<group>"; };
+		A5FEAAE811865D89003C7521 /* customButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customButton.h; sourceTree = "<group>"; };
+		A5FEAAE911865D89003C7521 /* customButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customButton.m; sourceTree = "<group>"; };
+		A5FEAAEA11865D89003C7521 /* ListButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListButtonViewController.h; sourceTree = "<group>"; };
+		A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListButtonViewController.m; sourceTree = "<group>"; };
+		A5FEAAEC11865D89003C7521 /* EditButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditButtonViewController.h; sourceTree = "<group>"; };
+		A5FEAAED11865D89003C7521 /* EditButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditButtonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +98,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5FEAAE811865D89003C7521 /* customButton.h */,
+				A5FEAAE911865D89003C7521 /* customButton.m */,
+				A5FEAAEA11865D89003C7521 /* ListButtonViewController.h */,
+				A5FEAAEB11865D89003C7521 /* ListButtonViewController.m */,
+				A5FEAAEC11865D89003C7521 /* EditButtonViewController.h */,
+				A5FEAAED11865D89003C7521 /* EditButtonViewController.m */,
 				A5D18346116E534A00E2122C /* LCFileHelpers.h */,
 				A5D18347116E534A00E2122C /* LCFileHelpers.m */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
@@ -141,10 +158,11 @@
 				A5FEAAA711865BEC003C7521 /* Prime31.bundle */,
 				A5FEAAA811865BEC003C7521 /* Three20.bundle */,
 				A516EA00116E644E0024FFA5 /* AddTemplateViewController.xib */,
-				A57FD30A116D503A0078207A /* TemplateViewController.xib */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Final_Templates-Info.plist */,
+				A5FEAAE211865D39003C7521 /* editView.xib */,
+				A5FEAAE311865D39003C7521 /* listView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -235,10 +253,11 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
-				A57FD30B116D503A0078207A /* TemplateViewController.xib in Resources */,
 				A516EA01116E644E0024FFA5 /* AddTemplateViewController.xib in Resources */,
 				A5FEAAA911865BEC003C7521 /* Prime31.bundle in Resources */,
 				A5FEAAAA11865BEC003C7521 /* Three20.bundle in Resources */,
+				A5FEAAE411865D39003C7521 /* editView.xib in Resources */,
+				A5FEAAE511865D39003C7521 /* listView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +276,9 @@
 				A55B3F44116E3E1700C28475 /* TemplatesLoader.m in Sources */,
 				A5D18348116E534A00E2122C /* LCFileHelpers.m in Sources */,
 				A516E9FF116E640D0024FFA5 /* AddTemplateViewController.m in Sources */,
+				A5FEAAEF11865D89003C7521 /* customButton.m in Sources */,
+				A5FEAAF011865D89003C7521 /* ListButtonViewController.m in Sources */,
+				A5FEAAF111865D89003C7521 /* EditButtonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -138,14 +138,14 @@ ______________________________________________________________ */
 	
 	if(self.templateView == nil)
 	{
-		TemplateViewController * viewController = [[TemplateViewController alloc] initWithNibName:@"TemplateViewController" bundle:[NSBundle mainBundle]];
-		self.templateView = viewController;
-		[viewController release];
+		TemplateViewController * aView = [[TemplateViewController alloc] init];
+		self.templateView = aView;
+		//[aView release];
 	}
 	
 	[self.navigationController pushViewController:self.templateView animated:YES];
-	self.templateView.title = [t name];
-	self.templateView.templateName.text = [t name];
+	//self.templateView.title = [t name];
+	//self.templateView.templateName.text = [t name];
 }
 
 
