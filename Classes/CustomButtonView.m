@@ -44,8 +44,13 @@
 }
 
 -(IBAction)buttonClick:(id)sender
-{	
-	NSLog(@"%@", self.model.shortcut);	
+{
+	NSLog(@">>>> Button pressed \n");
+	
+	for(int i = 0; i < [self.model.shortcuts count]; i++) 
+	{
+		NSLog(@"Shortcut: %@ \n", [self.model.shortcuts objectAtIndex:i]);
+	}
 }
 
 @end

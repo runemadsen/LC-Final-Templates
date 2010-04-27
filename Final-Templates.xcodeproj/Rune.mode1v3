@@ -279,14 +279,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
-									<integer>10</integer>
+									<integer>23</integer>
+									<integer>21</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 214}, {286, 760}}</string>
+							<string>{{0, 198}, {286, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -323,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EditButtonViewController.m</string>
+								<string>CustomButtonView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EditButtonViewController.m</string>
+										<string>CustomButtonView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A5E2E9FD118790B700E3EDEE</string>
+										<string>A5E2EA35118796BD00E3EDEE</string>
 										<key>history</key>
 										<array>
 											<string>A57FD310116D512F0078207A</string>
@@ -344,25 +344,25 @@
 											<string>A5FEAC5E118683CD003C7521</string>
 											<string>A5FEAC60118683CD003C7521</string>
 											<string>A5FEAC9F11868CF1003C7521</string>
-											<string>A5FEACE11186910F003C7521</string>
 											<string>A5FEAD1911869384003C7521</string>
 											<string>A5FEAD1A11869384003C7521</string>
-											<string>A5FEAD3611869459003C7521</string>
 											<string>A5FEAD3711869459003C7521</string>
-											<string>A5D6C94511873F6800D0AB33</string>
-											<string>A5D6C96F118743F500D0AB33</string>
-											<string>A5D6C970118743F500D0AB33</string>
 											<string>A5E2E8F61187833100E3EDEE</string>
 											<string>A5E2E8F71187833100E3EDEE</string>
 											<string>A5E2E8F81187833100E3EDEE</string>
 											<string>A5E2E98011878A0700E3EDEE</string>
-											<string>A5E2E98111878A0700E3EDEE</string>
 											<string>A5E2E98F11878B5300E3EDEE</string>
 											<string>A5E2E99011878B5300E3EDEE</string>
-											<string>A5E2E99111878B5300E3EDEE</string>
-											<string>A5E2E99211878B5300E3EDEE</string>
-											<string>A5E2E9FA1187909B00E3EDEE</string>
-											<string>A5E2E9FB1187909B00E3EDEE</string>
+											<string>A5E2EA021187922800E3EDEE</string>
+											<string>A5E2EA0E1187940000E3EDEE</string>
+											<string>A5E2EA1E1187954900E3EDEE</string>
+											<string>A5E2EA1F1187954900E3EDEE</string>
+											<string>A5E2EA201187954900E3EDEE</string>
+											<string>A5E2EA211187954900E3EDEE</string>
+											<string>A5E2EA261187957100E3EDEE</string>
+											<string>A5E2EA33118796BD00E3EDEE</string>
+											<string>A5E2EA34118796BD00E3EDEE</string>
+											<string>A5D6C970118743F500D0AB33</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -560,10 +560,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A57FD2BD116D402B0078207A</string>
 		<string>/Users/Rune/Projects/Little Computers/Repositories/Final-Templates/Final-Templates.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1440 819 0 0 1440 878 </string>
@@ -939,7 +939,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

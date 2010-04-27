@@ -88,7 +88,19 @@
 	
 	CustomButton * buttonModel = [[CustomButton alloc] init];
 	buttonModel.name = [[editView firstTextField] text];
-	buttonModel.shortcut = [[editView secondTextField] text];
+	//buttonModel.shortcut = [[editView secondTextField] text];
+	
+	// loop through array and make a new array with strings that gets assigned to model
+	NSMutableArray * shortcuts = [[NSMutableArray alloc] init];
+	
+	for(int i = 0; i < [[[editView shortcutField] cellViews] count]; i++) 
+	{
+		TTPickerViewCell * cell = [[[editView shortcutField] cellViews] objectAtIndex:i];
+		
+		[shortcuts addObject: [cell label]];
+	}
+	
+	buttonModel.shortcuts = shortcuts;
 	buttonModel.location = CGPointMake(20, 20);
 	
 	// push to model
