@@ -1,19 +1,14 @@
-//
-//  EditButtonViewController.h
-//  finalphone
-//
-//  Created by Nikolas Psaroudakis on 4/12/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
+#import "Three20/Three20.h"
 #import <UIKit/UIKit.h>
+#import "PickerDataSource.h"
 
 
-@interface EditButtonViewController : UIViewController <UITextFieldDelegate> {
-	UITextField *firstTextField;
-	UITextField *secondTextField;
+@interface EditButtonViewController : UIViewController <UITextFieldDelegate> 
+{
+	UITextField * firstTextField;
+	TTPickerTextField * shortcutField;
 	
 }
-@property (nonatomic, retain) IBOutlet UITextField *firstTextField;
-@property (nonatomic, retain) IBOutlet UITextField *secondTextField;
+@property (nonatomic, retain) UITextField * firstTextField;
+@property (nonatomic, retain) TTPickerTextField * shortcutField;
 @end

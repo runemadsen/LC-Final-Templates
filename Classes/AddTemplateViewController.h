@@ -12,7 +12,7 @@
 @interface AddTemplateViewController : UIViewController {
 
 	IBOutlet UITextField * templateName;
-	IBOutlet UIButton* saveButton;
+	IBOutlet UIButton * saveButton;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField * templateName;

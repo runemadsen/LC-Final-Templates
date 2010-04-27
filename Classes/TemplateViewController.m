@@ -27,7 +27,8 @@
 	
 	[self.listView refreshButtons:model.buttons];
 	
-	EditButtonViewController * editB = [[EditButtonViewController alloc] initWithNibName:@"editView" bundle:nil];
+	EditButtonViewController * editB = [[EditButtonViewController alloc] init];
+	//EditButtonViewController * editB = [[EditButtonViewController alloc] initWithNibName:@"editView" bundle:nil];
 	self.editView = editB;
 	[super viewDidLoad];
 	[editB release];
