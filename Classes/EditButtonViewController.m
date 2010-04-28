@@ -9,50 +9,46 @@
 {
 	NSLog(@"View did load");
 	
-	firstTextField = [[UITextField alloc] initWithFrame:CGRectMake(12, 5, 260, 35)];
-	[firstTextField setBackgroundColor:[UIColor whiteColor]];
+	firstTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, -10, 280, 42)];
+	firstTextField.background = [UIImage imageNamed:@"textfield.png"];
+	firstTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    firstTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 	firstTextField.placeholder = @"Button Name";
-	firstTextField.borderStyle = UITextBorderStyleRoundedRect;
+	firstTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+	firstTextField.adjustsFontSizeToFitWidth = NO;
+	firstTextField.textColor = [UIColor colorWithWhite:0.56 alpha:1];
+	firstTextField.font = [UIFont systemFontOfSize:14];
 	[self.view addSubview:firstTextField];
-	
-	/*secondTextField = [[UITextField alloc] initWithFrame:CGRectMake(12, 60, 260, 35)];
-	[secondTextField setBackgroundColor:[UIColor whiteColor]];
-	secondTextField.placeholder = @"Short cut";
-	secondTextField.borderStyle = UITextBorderStyleRoundedRect;
-	[self.view addSubview:secondTextField];*/
 	
 	CGRect frame = TTNavigationFrame();
 	frame.origin.y += 45;
 	frame.size.height -= 45;
-	
-	UIScrollView * scrollView = [[[UIScrollView alloc] initWithFrame:frame] autorelease];
-    scrollView.backgroundColor = TTSTYLEVAR(backgroundColor);
-    scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    scrollView.canCancelContentTouches = NO;
-    scrollView.showsVerticalScrollIndicator = NO;
-    scrollView.showsHorizontalScrollIndicator = NO;
-    [self.view addSubview:scrollView];
     
-    shortcutField = [[[TTPickerTextField alloc] init] autorelease];
+    shortcutField = [[[TTPickerTextField alloc] initWithFrame:CGRectMake(20, 40, 280, 42)] autorelease];
     shortcutField.dataSource = [[[PickerDataSource alloc] init] autorelease];;
     shortcutField.autocorrectionType = UITextAutocorrectionTypeNo;
     shortcutField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     shortcutField.rightViewMode = UITextFieldViewModeAlways;
     shortcutField.delegate = self;
     shortcutField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    [shortcutField sizeToFit];
+    //[shortcutField sizeToFit];
+	shortcutField.font = [UIFont systemFontOfSize:14];
+	shortcutField.textColor = [UIColor colorWithWhite:0.56 alpha:1];
+	//shortcutField.placeholder = @"Shortcut";
+	shortcutField.background = [UIImage imageNamed:@"textfield.png"];
+	
+	UIScrollView * scrollView = [[[UIScrollView alloc] initWithFrame:frame] autorelease];
+    //scrollView.backgroundColor = TTSTYLEVAR(backgroundColor);
+    scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    scrollView.canCancelContentTouches = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    [self.view addSubview:scrollView];
     
-    UILabel * label = [[[UILabel alloc] init] autorelease];
-    label.text = @"Shortcut:";
-    label.font = TTSTYLEVAR(messageFont);
-    label.textColor = TTSTYLEVAR(messageFieldTextColor);
-    [label sizeToFit];
-    label.frame = CGRectInset(label.frame, -2, 0);
-    shortcutField.leftView = label;
-    shortcutField.leftViewMode = UITextFieldViewModeAlways;
-    [shortcutField becomeFirstResponder];
+    [firstTextField becomeFirstResponder];
     
-    [scrollView addSubview:shortcutField];
+    //[scrollView addSubview:shortcutField];
+	[self.view addSubview:shortcutField];
     
     CGFloat y = 0;
     

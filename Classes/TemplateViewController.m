@@ -20,7 +20,6 @@
 
 -(void)viewDidLoad
 {	
-	//ListButtonViewController * listB = [[ListButtonViewController alloc] initWithNibName:@"listView" bundle:nil];
 	ListButtonViewController * listB = [[ListButtonViewController alloc] init];
 	self.listView = listB;
 	[self.view insertSubview:listB.view atIndex:0];
@@ -29,12 +28,13 @@
 	[self.listView refreshButtons:model.buttons];
 	
 	EditButtonViewController * editB = [[EditButtonViewController alloc] init];
-	//EditButtonViewController * editB = [[EditButtonViewController alloc] initWithNibName:@"editView" bundle:nil];
 	self.editView = editB;
 	[super viewDidLoad];
 	[editB release];
 	
 	[self displayListToolbar];
+	
+	[self.view setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
 	
 	enable = YES;
 }
@@ -121,23 +121,33 @@
 	[self.toolbar removeFromSuperview];
 	//Add buttons
 	
-	UIBarButtonItem *newButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+	UIBarButtonItem * newButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 																			   target:self
 																			   action:@selector(newButton:)];
 	
-	UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+	UIBarButtonItem * editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
 																				target:self
 																				action:@selector(editButton:)];
 	
-	UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+	UIBarButtonItem * deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
 																				  target:self
 																				  action:@selector(trushButton:)];
 	
 	NSArray * items = [NSArray arrayWithObjects: newButton, deleteButton, editButton, nil];
 	
-	UIToolbar * tools = [UIToolbar new];
+	UIToolbar * tools = [UIToolbarExtend new];
+	
+
+	
 	tools.frame = CGRectMake(0, 0, 133, 44.01);
 	[tools setItems:items animated:NO];
+	
+	//[tools setBarStyle:UIBarStyleBlackTranslucent];
+	[tools setTranslucent:YES];
+	
+	// these should change the button colors but they dont
+	tools.tintColor = [UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1];
+	
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tools];
 	
@@ -159,10 +169,16 @@
 	
 	NSArray *items = [NSArray arrayWithObjects: cancelButton, doneButton, nil];	
 	
-	UIToolbar * tools =[UIToolbar new];
+	UIToolbar * tools =[UIToolbarExtend new];
 
 	tools.frame = CGRectMake(0, 0, 133, 44.01);
 	[tools setItems:items animated:NO];
+	
+	//[tools setBarStyle:UIBarStyleBlackTranslucent];
+	[tools setTranslucent:YES];
+	
+	// these should change the button colors but they dont
+	tools.tintColor = [UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1];
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tools];
 	

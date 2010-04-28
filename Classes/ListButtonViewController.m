@@ -1,6 +1,5 @@
 #import "ListButtonViewController.h"
-#import "customButton.h"
-#import "TemplateViewController.h"
+
 
 @implementation ListButtonViewController
 
@@ -17,17 +16,13 @@
 		[view removeFromSuperview];
 	}
 	
+	
 	for(int i = 0; i < [buttons count]; i++) 
 	{
-		CGRect rect = CGRectMake(20, 20, 60, 20);
+		CGRect rect = CGRectMake(20, 20, 150, 35);
 		CustomButtonView * btn = [[CustomButtonView alloc] initWithFrame:rect model:[buttons objectAtIndex:(NSUInteger) i]];
 		[self.view addSubview:btn];
 	}
-}
-
--(void)trialMethod:(id)sender 
-{	
-	NSLog(@"Button was Pressed");
 }
 
 - (void)didReceiveMemoryWarning 

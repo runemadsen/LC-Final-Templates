@@ -8,6 +8,7 @@
 
 #import "Final_TemplatesAppDelegate.h"
 #import "RootViewController.h"
+#import "ButtonStylesheet.h"
 
 @implementation Final_TemplatesAppDelegate
 
@@ -21,6 +22,8 @@
 {    
 	// style the navigationbar
 	navigationController.navigationBar.tintColor = [UIColor colorWithWhite:0.4 alpha:1.0];
+	
+	[TTStyleSheet setGlobalStyleSheet:[[[ButtonStyleSheet alloc] init] autorelease]];
 	
 	[window addSubview:[navigationController view]];
     [window makeKeyAndVisible];

@@ -21,6 +21,8 @@
 		A54CD8F01187AB650083822E /* topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A54CD8EF1187AB650083822E /* topbar.png */; };
 		A54CD9C91187BC810083822E /* textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = A54CD9C81187BC810083822E /* textfield.png */; };
 		A54CD9EB1187C0470083822E /* savebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = A54CD9EA1187C0470083822E /* savebutton.png */; };
+		A54CDA631187CBE90083822E /* UIToolbarExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = A54CDA621187CBE90083822E /* UIToolbarExtend.m */; };
+		A54CDAF41187D3650083822E /* ButtonStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A54CDAF31187D3650083822E /* ButtonStylesheet.m */; };
 		A55B3F44116E3E1700C28475 /* TemplatesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A55B3F43116E3E1700C28475 /* TemplatesLoader.m */; };
 		A57FD303116D4CD90078207A /* Template.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD302116D4CD90078207A /* Template.m */; };
 		A57FD30E116D506B0078207A /* TemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57FD30D116D506B0078207A /* TemplateViewController.m */; };
@@ -85,6 +87,10 @@
 		A54CD8EF1187AB650083822E /* topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topbar.png; path = images/topbar.png; sourceTree = "<group>"; };
 		A54CD9C81187BC810083822E /* textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textfield.png; path = images/textfield.png; sourceTree = "<group>"; };
 		A54CD9EA1187C0470083822E /* savebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = savebutton.png; path = images/savebutton.png; sourceTree = "<group>"; };
+		A54CDA611187CBE90083822E /* UIToolbarExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIToolbarExtend.h; sourceTree = "<group>"; };
+		A54CDA621187CBE90083822E /* UIToolbarExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIToolbarExtend.m; sourceTree = "<group>"; };
+		A54CDAF21187D3650083822E /* ButtonStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonStylesheet.h; sourceTree = "<group>"; };
+		A54CDAF31187D3650083822E /* ButtonStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonStylesheet.m; sourceTree = "<group>"; };
 		A55B3F42116E3E1700C28475 /* TemplatesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplatesLoader.h; sourceTree = "<group>"; };
 		A55B3F43116E3E1700C28475 /* TemplatesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplatesLoader.m; sourceTree = "<group>"; };
 		A57FD301116D4CD90078207A /* Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Template.h; sourceTree = "<group>"; };
@@ -205,6 +211,8 @@
 			children = (
 				A54CD8D51187AAA60083822E /* NavigationBarExtend.h */,
 				A54CD8D61187AAA60083822E /* NavigationBarExtend.m */,
+				A54CDA611187CBE90083822E /* UIToolbarExtend.h */,
+				A54CDA621187CBE90083822E /* UIToolbarExtend.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -278,6 +286,8 @@
 				A5D18347116E534A00E2122C /* LCFileHelpers.m */,
 				A5E2E89C118781AC00E3EDEE /* PickerController.h */,
 				A5E2E89D118781AC00E3EDEE /* PickerController.m */,
+				A54CDAF21187D3650083822E /* ButtonStylesheet.h */,
+				A54CDAF31187D3650083822E /* ButtonStylesheet.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -390,6 +400,8 @@
 				A5E2E89B1187819400E3EDEE /* PickerDataSource.m in Sources */,
 				A5E2E89E118781AC00E3EDEE /* PickerController.m in Sources */,
 				A54CD8D71187AAA60083822E /* NavigationBarExtend.m in Sources */,
+				A54CDA631187CBE90083822E /* UIToolbarExtend.m in Sources */,
+				A54CDAF41187D3650083822E /* ButtonStylesheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

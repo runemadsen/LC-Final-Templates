@@ -12,10 +12,12 @@
 		self.frame = frame;
 		self.bounds = frame;
 		self.center = self.model.location;
-        UIButton * btn = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+		
+		UIButton * btn = (UIButton *) [TTButton buttonWithStyle:@"blackForwardButton:" title:@"Black Button"];
+		
 		btn.frame = frame;
+		[btn sizeToFit];
         
-		[btn setTitle:self.model.name forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
 		[btn setEnabled:YES];
 		[self setButton:btn];

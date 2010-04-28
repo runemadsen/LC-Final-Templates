@@ -1,7 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "CustomButton.h"
+#import "Three20/Three20.h"
+#import "ButtonStylesheet.h"
 
-@interface CustomButtonView : UIView 
+@interface CustomButtonView : UIView
 {
 	CustomButton * model;	
 	UIButton * button;
