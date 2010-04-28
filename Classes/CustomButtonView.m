@@ -13,7 +13,8 @@
 		self.bounds = frame;
 		self.center = self.model.location;
 		
-		UIButton * btn = (UIButton *) [TTButton buttonWithStyle:@"blackForwardButton:" title:@"Black Button"];
+		UIButton * btn = (UIButton *) [TTButton buttonWithStyle:@"blackForwardButton:" title:self.model.name];
+		button.titleLabel.font = [UIFont systemFontOfSize:26];
 		
 		btn.frame = frame;
 		[btn sizeToFit];
