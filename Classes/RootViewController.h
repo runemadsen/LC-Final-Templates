@@ -1,11 +1,3 @@
-//
-//  RootViewController.h
-//  Final-Templates
-//
-//  Created by Rune Madsen on 4/7/10.
-//  Copyright New York University 2010. All rights reserved.
-//
-
 #import "TemplateViewController.h"
 #import "TemplatesLoader.h"
 #import "AddTemplateViewController.h"

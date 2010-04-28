@@ -1,11 +1,3 @@
-//
-//  RootViewController.m
-//  Final-Templates
-//
-//  Created by Rune Madsen on 4/7/10.
-//  Copyright New York University 2010. All rights reserved.
-//
-
 #import "RootViewController.h"
 
 @implementation RootViewController
@@ -36,6 +28,10 @@ ______________________________________________________________ */
 	{		
 		loader = [[TemplatesLoader alloc] initEmpty];
 	}
+	
+	// Style background
+	[self.tableView setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
+	self.tableView.separatorColor = [UIColor colorWithWhite:.12 alpha:1];
 
 	self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
@@ -106,17 +102,24 @@ ______________________________________________________________ */
 /* Define how a cell looks like
  ______________________________________________________________ */
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[cell setBackgroundColor:[UIColor colorWithRed:(float) 21.0 / 255.0 green:(float) 24.0 / 255.0 blue:(float) 18.0 / 255.0 alpha:1]];
+	cell.textLabel.textColor = [UIColor colorWithWhite:.85 alpha:1];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {    
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+	if (cell == nil) 
+	{
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
 	// Configure the cell.
-	//Final_TemplatesAppDelegate * appDelegate = (Final_TemplatesAppDelegate *) [[UIApplication sharedApplication] delegate];
 	Template * t = (Template *) [loader.templates objectAtIndex:indexPath.row];
 	
 	[cell.textLabel setText:t.name];
@@ -132,20 +135,17 @@ ______________________________________________________________ */
 {
 	Template * t = (Template *) [loader.templates objectAtIndex:indexPath.row];
 	
-	if(self.templateView == nil)
-	{
+	//if(self.templateView == nil)
+	//{
+		//[self.templateView release];
 		TemplateViewController * aView = [[TemplateViewController alloc] initWithTemplate:t];
 		self.templateView = aView;
-		//[aView release];
-	}
+		[aView release];
+	//}
 	
 	t = (Template *) [loader.templates objectAtIndex:indexPath.row];
 	
-	NSLog(@"Name: %@", [t name]);
-	
 	[self.navigationController pushViewController:self.templateView animated:YES];
-	//self.templateView.title = [t name];
-	//self.templateView.templateName.text = [t name];
 }
 
 

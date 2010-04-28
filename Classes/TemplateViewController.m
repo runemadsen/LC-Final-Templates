@@ -20,7 +20,8 @@
 
 -(void)viewDidLoad
 {	
-	ListButtonViewController * listB = [[ListButtonViewController alloc] initWithNibName:@"listView" bundle:nil];
+	//ListButtonViewController * listB = [[ListButtonViewController alloc] initWithNibName:@"listView" bundle:nil];
+	ListButtonViewController * listB = [[ListButtonViewController alloc] init];
 	self.listView = listB;
 	[self.view insertSubview:listB.view atIndex:0];
 	[listB release];

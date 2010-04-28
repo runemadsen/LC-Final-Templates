@@ -19,6 +19,9 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application 
 {    
+	// style the navigationbar
+	navigationController.navigationBar.tintColor = [UIColor colorWithWhite:0.4 alpha:1.0];
+	
 	[window addSubview:[navigationController view]];
     [window makeKeyAndVisible];
 }
